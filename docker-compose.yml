@@ -1,0 +1,11 @@
+version: '3'
+services:
+  wp-nginx-server:
+    build: .
+    image: minhtrung/wordpress:latest
+    container_name: wp-nginx
+    ports:
+      - "80:80"
+      - "25:25"
+    volumes:
+      - ./web:/var/www/html
